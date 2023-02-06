@@ -61,7 +61,7 @@ public class IndexController {
 		//ログインチェック
 	    if(employee == null) {
 	      //存在しない場合
-	      String errMsg = "社員番号もしくはパスワードが違います";
+	      String errMsg = "社員番号もしくはパスワードが違います．";
 	      model.addAttribute("errMsg", errMsg);
 	      
 	      return "login";
