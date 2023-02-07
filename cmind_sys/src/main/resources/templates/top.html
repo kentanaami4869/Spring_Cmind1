@@ -16,6 +16,27 @@
 		<h3 class="page_title">社員一覧画面</h3>
 		<th:block th:text="${loginForm.empId}"></th:block>
 	</article>
+	 <table class="table employee">
+      <thead>
+        <tr>
+          <th>社員番号</th>
+          <th>名前</th>
+          <th>生年月日</th>
+          <th>性別</th>
+         
+        </tr>
+      </thead>
+      <tbody>
+        <tr th:each="employee : ${employee}" th:object="${top}">
+          <td th:text="*{emp_id}"></td>
+          <td th:text="*{emp_name}"></td>
+          <td th:text="*{birthday}"></td>
+          <td th:text="*{gender}"></td>
+         
+         
+        </tr>
+      </tbody>
+    </table>
 	<!-- フッダー -->
 	<footer th:include="layout/footer :: foot"></footer>
 
